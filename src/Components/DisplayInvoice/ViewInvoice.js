@@ -40,7 +40,7 @@ export default class ViewInvoice extends Component {
                 <h4>To:</h4>
                 <h3>{this.state.data.clientname}</h3>
                 <p>{this.state.data.cmail}</p>
-                <p>{this.state.data.clientsaddress}</p>
+                <p>{this.state.data.clientaddress}</p>
                 <p>{this.state.data.cphno}</p>
                 </div>
                 </div>

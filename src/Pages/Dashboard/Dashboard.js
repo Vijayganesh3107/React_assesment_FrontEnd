@@ -67,10 +67,10 @@ export default function Dashboard() {
         <NavBarwithLogout></NavBarwithLogout>
         <div>
             <Row>
-                <Col xl={6} className="text-right">
+                <Col xl={6} sm={6} xs={12} className="">
                     <Label for="searchedtext">Search Invoice:</Label>                
                 </Col>
-                <Col xl={6}>
+                <Col xl={6} sm={6} xs={12}>
             <input type="text" placeholder="Search by Client" id="searchedtext" value={searchedItem} onChange={handleSearchedItemChange}/>
             <Button color="success" className="ml-4" onClick={handleSearchButtonClick}>Search</Button>
             <Button color="primary" className="ml-4" onClick={handleCreateInvoice}>Create an Invoice</Button>
