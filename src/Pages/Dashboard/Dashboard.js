@@ -9,6 +9,7 @@ import { faUser} from '@fortawesome/free-solid-svg-icons'
 import {faFacebookSquare,faInstagramSquare,faTwitterSquare} from "@fortawesome/free-brands-svg-icons"
 
 export default function Dashboard() {
+    const[date,setDate]=useState(new Date());
     const JWT=localStorage.getItem("JWT")
     const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -85,6 +86,11 @@ export default function Dashboard() {
       </Collapse>
             </Col>
             </Row>
+            {/* <Row>
+                count:
+            {data.doi==date.toLocaleString() ? (
+            data.filter((item)=>item.doi==date.toLocaleString()).length):(0)}
+            </Row> */}
             {!seachclicked ? 
             <Table striped>
                 <thead>

@@ -61,7 +61,7 @@ export default function HomePage() {
       </div>
       <footer className="col-xl-6 mt-5">
         <div className="footer">
-          MyRecipie&#174;<br />
+          Invoice Management Services&#174;<br />
           2/41, Resolute Towers, 2nd Lane, MC Nicholas Rd, Chennai, 600031
         </div>
       </footer>
