@@ -1,0 +1,9 @@
+.cards {
+  width: 50%;
+  bottom: 50%;
+  left: 25%;
+}
+
+.rounded {
+  border-radius: 50%;
+}
