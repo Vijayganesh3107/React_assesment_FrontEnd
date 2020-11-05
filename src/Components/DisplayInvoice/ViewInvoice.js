@@ -13,7 +13,7 @@ export default class ViewInvoice extends Component {
         
 }
     componentDidMount(){
-        fetch(`http://localhost:5000/all-invoice-details/${this.id}`
+        fetch(`https://invoice-management-app-react.herokuapp.com/all-invoice-details/${this.id}`
         ).then(res=>res.json()).then(data1=>this.setState({data:data1})).catch(e=>console.log(e))
     }
     render() {
@@ -148,7 +148,7 @@ export default class ViewInvoice extends Component {
     // const id=props.id;
     // const[data,setData]=useState([]);
     // useEffect(()=>{
-    //     fetch(`http://localhost:5000/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
+    //     fetch(`https://invoice-management-app-react.herokuapp.com/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
     // },[])
     // return (
     //     <>

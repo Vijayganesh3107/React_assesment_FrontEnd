@@ -15,7 +15,7 @@ export default function DeleteInvoice() {
    
 
     const handleDeleteCLick=async()=>{
-        var res=await fetch("http://localhost:5000/delete-invoice/"+id,{
+        var res=await fetch("https://invoice-management-app-react.herokuapp.com/delete-invoice/"+id,{
             method:"DELETE",
             headers:
             {
@@ -31,7 +31,7 @@ export default function DeleteInvoice() {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
+        fetch(`https://invoice-management-app-react.herokuapp.com/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
     },[])
     return (
         

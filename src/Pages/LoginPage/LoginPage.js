@@ -24,7 +24,7 @@ export default function LoginPage() {
             email,
             password
         }
-        let res=await fetch("http://localhost:5000/login",{
+        let res=await fetch("https://invoice-management-app-react.herokuapp.com/login",{
             method:"POST",
             body:JSON.stringify(bodydata),
             headers:{

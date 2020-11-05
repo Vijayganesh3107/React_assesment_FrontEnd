@@ -25,7 +25,7 @@ export default function ChangePassword() {
                 var bodydata={
                     password:pass,
                 }
-                var res=await fetch(`http://localhost:5000/changepassword/${email}`,{
+                var res=await fetch(`https://invoice-management-app-react.herokuapp.com/changepassword/${email}`,{
                     method:"PUT",
                     body:JSON.stringify(bodydata),
                     headers:{

@@ -111,7 +111,7 @@ export default function EditInvoice() {
             price2,
             price3
         }
-        var res=await fetch("http://localhost:5000/update-invoice",{
+        var res=await fetch("https://invoice-management-app-react.herokuapp.com/update-invoice",{
             method:"PUT",
             body:JSON.stringify(bodydata),
             headers:
@@ -128,7 +128,7 @@ export default function EditInvoice() {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/all-invoice-details/${id}`,{
+        fetch(`https://invoice-management-app-react.herokuapp.com/all-invoice-details/${id}`,{
         }).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
     },[])
     return (

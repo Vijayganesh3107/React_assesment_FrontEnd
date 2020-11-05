@@ -20,7 +20,7 @@ export default function AddNewUser() {
                 password:"",
                 activated:false
             }
-            const res=await fetch("http://localhost:5000/adduser",{
+            const res=await fetch("https://invoice-management-app-react.herokuapp.com/adduser",{
                 method:"POST",
                 body:JSON.stringify(bodydata),
                 headers:{

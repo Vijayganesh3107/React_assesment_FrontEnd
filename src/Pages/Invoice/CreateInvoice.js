@@ -130,7 +130,7 @@ export default function CreateInvoice() {
             doi:doi.toLocaleDateString(),
             duedate:duedate.toLocaleDateString()
         }
-        const req=await fetch("http://localhost:5000/create-invoice",{
+        const req=await fetch("https://invoice-management-app-react.herokuapp.com/create-invoice",{
             method:"POST",
             body:JSON.stringify(bodydata),
             headers:{

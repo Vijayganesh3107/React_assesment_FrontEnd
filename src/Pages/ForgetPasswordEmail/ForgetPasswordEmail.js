@@ -17,7 +17,7 @@ export default function ForgetPasswordEmail() {
         var bodydata={
             email
         }
-        var res=await fetch("http://localhost:5000/forgetpassword",{
+        var res=await fetch("https://invoice-management-app-react.herokuapp.com/forgetpassword",{
             method:"POST",
             body:JSON.stringify(bodydata),
             headers:{

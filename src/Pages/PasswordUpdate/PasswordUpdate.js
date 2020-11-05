@@ -23,7 +23,7 @@ export default function PasswordUpdate() {
                 var bodydata={
                     password:password
                 }
-                var res=await fetch(`http://localhost:5000/setpassword/${email}`,{
+                var res=await fetch(`https://invoice-management-app-react.herokuapp.com/setpassword/${email}`,{
                     method:"PUT",
                     body:JSON.stringify(bodydata),
                     headers:{

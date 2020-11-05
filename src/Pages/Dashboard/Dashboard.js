@@ -54,7 +54,7 @@ export default function Dashboard() {
     
 
     useEffect(() => {
-        fetch("http://localhost:5000/all-invoice-details",{
+        fetch("https://invoice-management-app-react.herokuapp.com/all-invoice-details",{
             headers:{
             
             }

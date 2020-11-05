@@ -27,7 +27,7 @@ export default function DisplayInvoice() {
       
     // const[data,setData]=useState([]);
     // useEffect(()=>{
-    //     fetch(`http://localhost:5000/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
+    //     fetch(`https://invoice-management-app-react.herokuapp.com/all-invoice-details/${id}`).then(res=>res.json()).then(data=>setData(data)).catch(e=>console.log(e))
     // },[])
     // return (
     //     <>
