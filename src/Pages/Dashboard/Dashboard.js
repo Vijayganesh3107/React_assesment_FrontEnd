@@ -9,7 +9,6 @@ import { faUser} from '@fortawesome/free-solid-svg-icons'
 import {faFacebookSquare,faInstagramSquare,faTwitterSquare} from "@fortawesome/free-brands-svg-icons"
 
 export default function Dashboard() {
-    const[date,setDate]=useState(new Date());
     const JWT=localStorage.getItem("JWT")
     const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -55,21 +54,15 @@ export default function Dashboard() {
     
 
     useEffect(() => {
-        fetch("https://invoice-management-app-react.herokuapp.com/all-invoice-details",{
-            headers:{
-            
-            }
-        }).then(req=>req.json()).then(data=>setData(data))
+        fetch("https://invoice-management-app-react.herokuapp.com/all-invoice-details").then(req=>req.json()).then(data=>setData(data))
         
     }, [])
     return (
         <>
         <NavBarwithLogout></NavBarwithLogout>
         <div>
-            <Row>
-                <Col xl={6} sm={6} xs={12} className="">
-                    <Label for="searchedtext">Search Invoice:</Label>                
-                </Col>
+            <Row className="justify-content-end">
+                
                 <Col xl={6} sm={6} xs={12}>
             <input type="text" placeholder="Search by Client" id="searchedtext" value={searchedItem} onChange={handleSearchedItemChange}/>
             <Button color="success" className="ml-4" onClick={handleSearchButtonClick}>Search</Button>
@@ -86,11 +79,6 @@ export default function Dashboard() {
       </Collapse>
             </Col>
             </Row>
-            {/* <Row>
-                count:
-            {data.doi==date.toLocaleString() ? (
-            data.filter((item)=>item.doi==date.toLocaleString()).length):(0)}
-            </Row> */}
             {!seachclicked ? 
             <Table striped>
                 <thead>
@@ -102,10 +90,10 @@ export default function Dashboard() {
                     Client Name
                 </th>
                 <th>
-                    Date of Issue
+                    Date of Issue(MM/DD/YYYY)
                 </th>
                 <th>
-                    Due date
+                    Due date(MM/DD/YYYY)
                 </th>
                 <th>
                     Amount
@@ -123,8 +111,8 @@ export default function Dashboard() {
                                 {item._id}
                             </td>
                             <td>{item.clientname}</td>
-                            <td>{item.doi}</td>
-                            <td>{item.duedate}</td>
+                            <td>{item.doi.toLocaleString()}</td>
+                            <td>{item.duedate.toLocaleString()}</td>
                             <td>{(item.price1+item.price2+item.price3)+(item.price1+item.price2+item.price3)*.18}</td>
                             <td><Button id={item._id} onClick={handleViewClick} color="warning">View</Button></td>
                             <td><Button id={item._id} onClick={handleEditClick} color="primary">Edit</Button></td>
